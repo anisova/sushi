@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/tiny-slider.css">
+  <link rel="stylesheet" href="./css/main.css"> <!-- Подключаем CSS -->
+  <link rel="stylesheet" href="./css/normalize.css"> <!-- Подключаем normalize -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__group">
+        <a href="#" class="logo logo-margin">
+          <img src="./img/logo.png" alt="logo">
+        </a>
+        <nav class="header__menu">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Кухня</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Атмосфера</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Меню</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__profile">
+          <ul class="profile">
+            <li class="profile__item">
+              <a href="#" class="profile__link">
+                <svg class="profile__icon" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="profile__item">
+              <a href="#" class="profile__link">
+                <svg class="profile__icon">
+                  <use xlink:href='./img/sprite.svg#search'>
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="profile__item">
+              <a href="#" class="profile__link">
+                <svg class="profile__icon">
+                  <use xlink:href='./img/sprite.svg#user'>
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="profile__item">
+              <a href="#" class="profile__link">
+                <svg class="profile__icon">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </header>
+
+
+    <section class="cook" id="cook">
+      <div class="slider">
+        <img class="slider__img" src="./img/slider1.jpg" alt="sushi">
+        <img class="slider__img" src="./img/slider2.jpg" alt="sushi">
+        <img class="slider__img" src="./img/slider3.jpg" alt="sushi">
+      </div>
+    </section>
+  </div>
+
+  <section class="separator">
+    <div>
+      <img class="separator__logo" src="./img/logo.png" alt="logo">
+    </div>
+  </section>
+  <section class="atmosphere wrapper">
+    <div class="slider1">
+      <img class="slider__img" src="./img/atmosphere1.jpg" alt="sushi">
+      <img class="slider__img" src="./img/slider2.jpg" alt="sushi">
+      <img class="slider__img" src="./img/slider3.jpg" alt="sushi">
+    </div>
+  </section>
+  <section class="sushi-menu wrapper">
+    <h2 class="h2 sushi-menu__tittle">Sushi меню</h2>
+    <div class="sushi-menu__group sushi">
+      <div class="sushi__item sushi-card sushi-card_sushi">
+        <a href="#" class="sushi__link">
+          <p class="sushi-card__title ">
+            Суши
+          </p>
+        </a>
+      </div>
+      <div class="sushi__item sushi-card sushi-card_roll">
+        <a href="#" class="sushi__link">
+          <p class="sushi-card__title ">
+            Роллы
+          </p>
+        </a>
+      </div>
+      <div class="sushi__item sushi-card sushi-card_soup">
+        <a href="#" class="sushi__link">
+          <p class="sushi-card__title ">
+            Супы
+          </p>
+        </a>
+      </div>
+      <div class="sushi__item sushi-card sushi-card_starters">
+        <a href="#" class="sushi__link">
+          <p class="sushi-card__title ">
+            Закуски
+          </p>
+        </a>
+      </div>
+      <div class="sushi__item sushi-card sushi-card_set">
+        <a href="#" class="sushi__link">
+          <p class="sushi-card__title ">
+            Сеты
+          </p>
+        </a>
+      </div>
+      <div class="sushi__item sushi-card sushi-card_drinks">
+        <a href="#" class="sushi__link">
+          <p class="sushi-card__title ">
+            Напитки
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="hits wrapper">
+    <h2 class="h2 sushi-menu__tittle">Sushi хиты</h2>
+    <div class="hits__group">
+      <!-- Карточка продукта -->
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Филадельфия
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product1.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">6 штук</p>
+          <p class="product-card__price">250 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Филадельфия
+            </p>
+            <p class="product-card__ingridient_hover">
+              Лосось, авокадо, творожный сыр, огурец
+            </p>
+            <p class="product-card__number_hover">
+              6 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              250 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Спайси сяке маки
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product2.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">8 штук</p>
+          <p class="product-card__price">230 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Спайси сяке маки
+            </p>
+            <p class="product-card__ingridient_hover">
+              Лосось, творожный сыр, авокадо, нори
+            </p>
+            <p class="product-card__number_hover">
+              8 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              230 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Широкуро
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product3.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">6 штук</p>
+          <p class="product-card__price">280 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Широкуро
+            </p>
+            <p class="product-card__ingridient_hover">
+              Креветка, творожный сыр, авокадо, черный кунжут
+            </p>
+            <p class="product-card__number_hover">
+              6 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              280 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            авокадо
+          </p>
+          <p class="product-card__title">
+            Катори маки
+          </p>
+          <div class="product-card__img">
+            <img src="img/product4.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">8 штук</p>
+          <p class="product-card__price">200 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Катори маки
+            </p>
+            <p class="product-card__ingridient_hover">
+              Авокадо, творожный сыр, огурец
+            </p>
+            <p class="product-card__number_hover">
+              8 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              200 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Калифорния
+          </p>
+          <div class="product-card__img">
+            <img src="img/product5.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">6 штук</p>
+          <p class="product-card__price">200 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Калифорния
+            </p>
+            <p class="product-card__ingridient_hover">
+              Лосось, творожный сыр, авокадо
+            </p>
+            <p class="product-card__number_hover">
+              6 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              200 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Филадельфия
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product1.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">6 штук</p>
+          <p class="product-card__price">250 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Филадельфия
+            </p>
+            <p class="product-card__ingridient_hover">
+              Лосось, авокадо, творожный сыр, огурец
+            </p>
+            <p class="product-card__number_hover">
+              6 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              250 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Спайси сяке маки
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product2.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">8 штук</p>
+          <p class="product-card__price">230 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Спайси сяке маки
+            </p>
+            <p class="product-card__ingridient_hover">
+              Лосось, творожный сыр, авокадо, нори
+            </p>
+            <p class="product-card__number_hover">
+              8 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              230 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Широкуро
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product3.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">6 штук</p>
+          <p class="product-card__price">280 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Широкуро
+            </p>
+            <p class="product-card__ingridient_hover">
+              Креветка, творожный сыр, авокадо, черный кунжут
+            </p>
+            <p class="product-card__number_hover">
+              6 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              280 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            авокадо
+          </p>
+          <p class="product-card__title">
+            Катори маки
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product4.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">8 штук</p>
+          <p class="product-card__price">200 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Катори маки
+            </p>
+            <p class="product-card__ingridient_hover">
+              Авокадо, творожный сыр, огурец
+            </p>
+            <p class="product-card__number_hover">
+              8 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              200 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hits__card product-card">
+        <div class="product-card__desc">
+          <p class="product-card__ingridient">
+            лосось
+          </p>
+          <p class="product-card__title">
+            Калифорния
+          </p>
+          <div class="product-card__img">
+            <img src="./img/product5.png" alt="" class="product-card__pic">
+          </div>
+        </div>
+        <div class="product-card__price-group">
+          <p class="product-card__number">6 штук</p>
+          <p class="product-card__price">200 руб.</p>
+        </div>
+        <div class="hits__card product-card_hover">
+          <div class="product-card__desc_hover">
+            <p class="product-card__title product-card__title_hover">
+              Калифорния
+            </p>
+            <p class="product-card__ingridient_hover">
+              Лосось, творожный сыр, авокадо
+            </p>
+            <p class="product-card__number_hover">
+              6 штук / 200 грамм
+            </p>
+            <p class="product-card__price_hover">
+              200 руб.
+            </p>
+            <div class="product-card__counter">
+              <div class="product-card__sign">
+                <p class="product-card__minus">-</p>
+              </div>
+              <p class="product-card__num">1</p>
+              <div class="product-card__counter">
+                <div class="product-card__sign">
+                  <p class="product-card__plus">+</p>
+                </div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="#" class="product-card__link">
+                <svg class="profile__icon product-card__bag">
+                  <use xlink:href='./img/sprite.svg#bag'>
+                  </use>
+                </svg>
+              </a>
+              <svg class="profile__icon product-card__heart">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <section class="choose-menu wrapper">
+    <div class="choose-menu__left">
+      <a href="#" class="choose-menu__button button-menu">
+        Меню
+      </a>
+    </div>
+    <div class="choose-menu__right">
+      <label for="toggle__checkbox1" class="choose-menu__toggle toggle">
+        <input type="checkbox" class="toggle__checkbox" id="toggle__checkbox1">
+        <div class="toggle__block">
+          <div class="toggle__img">
+            <img src="./img/sushi.png" alt="">
+          </div>
+          <p class="toggle__text">суши</p>
+        </div>
+      </label>
+      <label for="toggle__checkbox2" class="choose-menu__toggle toggle">
+        <input type="checkbox" class="toggle__checkbox" id="toggle__checkbox2">
+        <div class="toggle__block">
+          <div class="toggle__img">
+            <img src="./img/roll.png" alt="">
+          </div>
+          <p class="toggle__text">роллы</p>
+        </div>
+      </label>
+      <label for="toggle__checkbox3" class="choose-menu__toggle toggle">
+        <input type="checkbox" class="toggle__checkbox" id="toggle__checkbox3">
+        <div class="toggle__block">
+          <div class="toggle__img">
+            <img src="./img/soup.png" alt="">
+          </div>
+          <p class="toggle__text">супы</p>
+        </div>
+      </label>
+      <label for="toggle__checkbox4" class="choose-menu__toggle toggle">
+        <input type="checkbox" class="toggle__checkbox" id="toggle__checkbox4">
+        <div class="toggle__block">
+          <div class="toggle__img">
+            <img src="./img/starter.png" alt="">
+          </div>
+          <p class="toggle__text">закуски</p>
+        </div>
+      </label>
+      <label for="toggle__checkbox5" class="choose-menu__toggle toggle">
+        <input type="checkbox" class="toggle__checkbox" id="toggle__checkbox5">
+        <div class="toggle__block">
+          <div class="toggle__img">
+            <img src="./img/sets.png" alt="">
+          </div>
+          <p class="toggle__text">сеты</p>
+        </div>
+      </label>
+      <label for="toggle__checkbox6" class="choose-menu__toggle toggle">
+        <input type="checkbox" class="toggle__checkbox" id="toggle__checkbox6">
+        <div class="toggle__block">
+          <div class="toggle__img">
+            <img src="./img/drinks.png" alt="">
+          </div>
+          <p class="toggle__text">напитки</p>
+        </div>
+      </label>
+    </div>
+  </section>
+  <section class="s-contacts">
+    <div class="s-contacts__map map__group">
+      <div class="map" id="map">
+        
+      </div>
+      <div class="s-contacts__socials socials">
+        <ul class="socials__group">
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link_vk">
+              <svg class="socials__icon" viewBox="0 0 24 24">
+                <use xlink:href='./img/sprite.svg#vk'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link_f">
+              <svg class="socials__icon" viewBox="0 0 24 24">
+                <use xlink:href='./img/sprite.svg#f'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link_insta">
+              <svg class="socials__icon" viewBox="0 0 24 24">
+                <use xlink:href='./img/sprite.svg#i'>
+                </use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>    
+
+    <div class="s-contacts__group contacts">
+      <div class="contacts__delivery">
+        <h3 class="h3">доставка</h3>
+        <p class="contacts__text">Минимальная сумма заказа
+          на доставку 20 руб</p>
+        <!-- <p class="contacts__text">Доставка: 11:00 - 23:00</p> -->
+        <p class="contacts__text">Прием заказов на доставку и
+          самовывоз заканчивается в
+          23:00</p>
+
+      </div>
+      <div class="contacts__schedule">
+        <h3 class="h3">Режим работы</h3>
+        <p class="contacts__text">
+          Доставка: <strong> 11:00 - 23:00 </strong><br>
+          Ресторан: <strong>11:00 - 00:00</strong><br>
+          Пт, Сб: <strong>11:00 - 01:00</strong>
+        </p>
+        <h3 class="h3">Режим работы</h3>
+        <p class="contacts__text">
+          г. Москва, ул. Валовая, 6
+          sushi@gmail.com
+        </p>
+      </div>
+
+    </div>
+
+
+  </section>
+
+ 
+<script src="./js/main.js">
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+
+  <script src="./js/map.js" type="text/javascript">
+  </script>
+
+  
+  <script src="./libs/tiny-slider.js">
+  </script>
+  <script type="text/javascript">
+    var slider = tns({
+      container: '.slider',
+      items: 1,
+      slideBy: "page",
+      mouseDrag: true,
+      swipeAngle: false,
+      speed: 400,
+      controls: true,
+      arrowKeys: true,
+      controlsPosition: "bottom",
+      controlsText: ["&#60", "&#62"],
+      nav: false
+    });
+  </script>
+  <script type="text/javascript">
+    var slider = tns({
+      container: '.slider1',
+      items: 1,
+      slideBy: "page",
+      mouseDrag: true,
+      swipeAngle: false,
+      speed: 400,
+      controls: true,
+      arrowKeys: true,
+      controlsPosition: "bottom",
+      controlsText: ["&#60", "&#62"],
+      nav: false
+    });
+  </script>
+</body>

@@ -1,0 +1,345 @@
+html {
+  font-size: 16px;
+
+  @include tablets {}
+
+  @include phones {}
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'OpenSans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  color: #000;
+  background-color: $baseColor;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;  
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  &__group {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:$whiteColor;
+    border-radius: 15px;
+    padding: 0 20px;
+  }
+}
+.logo {
+  height: 80%;
+}
+.menu {
+  display: flex;
+  &:last-child {
+    margin-right: 0;
+  }
+  &__item {
+    margin-right: 45px;
+  }
+  &__link {
+    text-transform: uppercase;    
+    font-size: 12px;
+    font-family: "COCOMAT", sans-serif;
+    color: $fontColor;
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}
+.profile {
+  display: flex;
+  & :last-child {
+    margin-right: 0;
+  }
+  &__item {
+    margin-right: 20px;
+    }
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;    
+    display: block;
+  }
+}
+.separator {
+  background: url('../img/separator.png') no-repeat center bottom/cover;
+  margin: 3% 0;
+  padding: 30px 0;  
+  text-align: center;
+  &__logo {    
+    width: 4%;
+  }
+}
+ .h2
+ {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: "COCOMAT", sans-serif;
+  font-weight: 400;
+  position: relative;  
+  padding: 0 0 0 2em;      
+  &:before {
+      content: '';
+      position: absolute;
+      background: url('../img/logo.png') no-repeat center center;
+      width: 2em;
+      height:2em;
+      left: 0;      
+      top:50%;      
+      transform: translateY(-50%)
+  }}
+  .sushi-menu__tittle {
+    margin: 3em 0;
+    &::after {
+      content: '';      
+      border-bottom: 1px solid black;
+      position: absolute;
+      bottom: 0;
+      width: 40%;
+    }
+  }  
+.sushi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+  &__link {
+    height: 15em;
+    display: block;   
+    position: relative;       
+    &:after {
+      content: '';
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    &:hover {      
+      &::after {
+        content: "";          
+        position: absolute;        
+        width: 100%;
+        height: 100%;
+        background: #2b2b2b;
+        opacity: 0.5;        
+        border-radius: 1em;  
+        transition: opacity 0.5s ease;      
+      }      
+  }    
+  }
+  &__item {
+    margin-bottom: 2em;
+  }  
+  &-card {
+    width: 32%;   
+    height: 100%; 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    border-radius: 1em;               
+    &__title {      
+      color: $whiteColor;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 2px;
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      vertical-align: bottom;
+      z-index: 10;
+    }
+    &_roll {
+      background-image: url('../img/roll.jpg');
+    }
+    &_soup {
+      background-image: url('../img/soup.jpg');
+    }
+    &_sushi {
+      background-image: url('../img/sushi.jpg');
+    }
+    &_starters {
+      background-image: url('../img/starters.jpg');
+    }
+    &_drinks {
+      background-image: url('../img/drinks.jpg');
+    }
+    &_set {
+      background-image: url('../img/set.jpg');
+    }
+    }
+}
+
+.hits__card  {
+  margin-bottom: 2em;
+}
+.hits__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.product-card {
+background-color: $whiteColor;
+width: 19%;
+padding: 1em 2em;
+border-radius: 25px;
+font-size: 14px;
+position: relative;
+&:hover {
+  .product-card_hover {
+    opacity: 1;
+    transition: opacity 1s ease; 
+  }
+}
+&__ingridient {
+  font-size: 12px;
+  color: grey;
+  text-transform: uppercase;
+}
+&__title {
+  font-weight: 600;
+  font-size: 18px;
+  &_hover {
+    margin-bottom: 1em;
+  }
+}
+&__img {  
+  margin: 2em auto;
+}
+&__price-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid gray;
+  padding: 10% 0 0 0;
+  font-weight: 600;
+}
+&__price {
+  border-radius: 2em;
+  background-color: #67c3ce;
+  padding: 0.5em 1em;
+}
+
+&_hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  padding: 1em 2em;
+  text-align: center;
+  color: white;
+}
+&__title_hover {
+  color: #67c3ce;
+}
+&__desc_hover {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+&__price_hover {
+  color: #67c3ce;
+  font-weight: 600;
+}
+&__links {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+&__link {
+  border-radius: 50%;
+  background-color: #67c3ce;  
+  width: 3em;
+  height: 3em;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+&__bag, &__heart {
+  stroke:white;    
+}
+&__heart {
+  cursor: pointer;
+}
+
+&__counter {
+  display: flex;
+  align-items: center;
+}
+&__num {
+  margin: 0 1em;
+}
+&__sign {
+  border: 1px solid white;
+  border-radius: 50%; 
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+&__minus, &__plus{
+  font-size: 20px;
+  font-weight: 600;      
+  line-height: 0;
+}
+}
+.h3 {
+  text-transform: uppercase;
+  font-family: 'COCOMAT',sans-serif;
+  font-weight: 600;
+  margin: 2em 0 1em 0;
+}

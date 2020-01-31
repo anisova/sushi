@@ -1,0 +1,60 @@
+.s-contacts {
+    display: flex;
+    margin: 3% 0 0 0;
+    background-color: $whiteColor;
+
+    &__map {
+        width: 50%;
+    }
+}
+.map {
+    width: 90%;
+    height: 50vh;
+    &__group {
+        display: flex;
+        align-items: center;
+    }
+    &__hint {
+        text-transform: uppercase;       
+    }
+}
+.contacts {    
+    display: flex;
+    justify-content: flex-start ;
+    width: 50%;
+    &__delivery, &__schedule {
+        width: 40%;
+        margin-left: 3em;
+    }     
+    &__text {
+        margin-bottom: 0.5em;
+    }
+}
+.socials {
+    text-align: center;
+    &:before {
+        content: "";
+        font-size: 2em;
+        border-left: 1px solid gray;        
+    }
+    &:after {
+        content: "";
+        font-size: 2em;
+        border-left: 1px solid gray
+    }
+    
+    &__link {
+        display: block;              
+        &:hover {            
+            & .socials__icon {
+                fill: black;
+                transition: all 1s ease;
+            }
+        }
+    }          
+    &__icon {
+        width: 30px;
+        height: 30px;
+        fill:grey;     
+    }
+}

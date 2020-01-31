@@ -1,0 +1,27 @@
+.tns-outer {
+    position: relative;
+}
+.tns-controls {
+    position: absolute;
+    bottom:20px;
+    left: 20px;
+    & button {
+        background: transparent;
+        color:  #626262;   
+        font-size: 50px;
+        font-weight: 300;
+        padding: 0 20px;
+        text-transform: uppercase;    
+        border: none;
+        text-align: center;
+        outline: none;
+        transition: color 0.5s ease;
+        line-height: 1;
+        &:hover {
+            color: gray;
+        }
+    }
+}
+.slider__img {
+    border-radius: 25px;
+}
