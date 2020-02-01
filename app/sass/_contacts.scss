@@ -2,9 +2,17 @@
     display: flex;
     margin: 3% 0 0 0;
     background-color: $whiteColor;
+    @include tablets {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        }
 
     &__map {
         width: 50%;
+        @include tablets {
+            width: 100%;
+            }
     }
 }
 .map {
@@ -12,7 +20,8 @@
     height: 50vh;
     &__group {
         display: flex;
-        align-items: center;
+        align-items: center;        
+        
     }
     &__hint {
         text-transform: uppercase;       
@@ -22,6 +31,9 @@
     display: flex;
     justify-content: flex-start ;
     width: 50%;
+    @include tablets {
+        width: 100%;
+        }
     &__delivery, &__schedule {
         width: 40%;
         margin-left: 3em;
