@@ -9,3 +9,8 @@
     @content;
 }
 }
+@mixin middle {
+  @media (max-width:$middle) {
+    @content;
+}
+}

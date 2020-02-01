@@ -74,7 +74,7 @@ img {
   max-height: 100%; }
 
 .wrapper {
-  width: 1170px;
+  width: 90vw;
   margin: 0 auto; }
 
 .header {
@@ -560,7 +560,8 @@ img {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative; }
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
     .toggle__block:before {
       content: "";
       width: 60px;
