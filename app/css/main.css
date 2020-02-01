@@ -227,6 +227,12 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 1em; }
+    @media (max-width: 768px) {
+      .sushi-card {
+        width: 49%; } }
+    @media (max-width: 480px) {
+      .sushi-card {
+        width: 90%; } }
     .sushi-card__title {
       color: #fff;
       text-transform: uppercase;
@@ -274,6 +280,12 @@ img {
   border-radius: 25px;
   font-size: 14px;
   position: relative; }
+  @media (max-width: 768px) {
+    .product-card {
+      width: 49%; } }
+  @media (max-width: 480px) {
+    .product-card {
+      width: 90%; } }
   .product-card:hover .product-card_hover {
     opacity: 1;
     -webkit-transition: opacity 1s ease;
