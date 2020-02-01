@@ -20,7 +20,7 @@
     height: 50vh;
     &__group {
         display: flex;
-        align-items: center;        
+        align-items: center;      
         
     }
     &__hint {
@@ -33,6 +33,7 @@
     width: 50%;
     @include tablets {
         width: 100%;
+        flex-direction: column;
         }
     &__delivery, &__schedule {
         width: 40%;

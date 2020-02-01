@@ -74,7 +74,7 @@ img {
   max-height: 100%; }
 
 .wrapper {
-  width: 90%;
+  width: 1170px;
   margin: 0 auto; }
 
 .header {
@@ -642,7 +642,12 @@ img {
   width: 50%; }
   @media (max-width: 768px) {
     .contacts {
-      width: 100%; } }
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .contacts__delivery, .contacts__schedule {
     width: 40%;
     margin-left: 3em; }
