@@ -91,6 +91,29 @@ img {
     }
   }
 }
+
+.button-menu {
+  font-family: "COCOMAT", sans-serif;
+  font-size: 26px;
+  background-color: $whiteColor;
+  text-transform: uppercase;
+  color: $fontColor;
+  padding: 1em 2em;             
+  border-radius: 10px;         
+  display: block;
+  overflow: hidden; 
+  position: relative;  
+  border: 1px solid transparent;
+  box-shadow: 0 0 10px rgba(grey, 0.3);
+  transition:  all 0.5s ease;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(grey, 0.3);
+    transition:  all 0.5s ease;
+    border: 1px solid rgba(grey, 0.4);
+  }
+      
+}
 .profile {
   display: flex;
   & :last-child {
@@ -126,7 +149,13 @@ img {
   font-family: "COCOMAT", sans-serif;
   font-weight: 400;
   position: relative;  
-  padding: 0 0 0 2em;      
+  padding: 0 0 0 2em;   
+  margin: 3em 0;      
+  @include phones {
+    font-size: 24px;
+    padding: 0;
+    margin: 2em 0;
+  }
   &:before {
       content: '';
       position: absolute;
@@ -135,18 +164,25 @@ img {
       height:2em;
       left: 0;      
       top:50%;      
-      transform: translateY(-50%)
-  }}
-  .sushi-menu__tittle {
-    margin: 3em 0;
-    &::after {
-      content: '';      
-      border-bottom: 1px solid black;
-      position: absolute;
-      bottom: 0;
-      width: 40%;
+      transform: translateY(-50%);
+      @include phones {
+        display: none;
+      }
+      
+
+  }
+  &:after {
+    content: '';      
+    border-bottom: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    @include tablets {
+      width: 30%;
     }
-  }  
+  }
+}
+  
 .sushi {
   display: flex;
   flex-wrap: wrap;

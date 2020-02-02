@@ -22,8 +22,20 @@
         }
     }
 }
-
+// .slider__button {
+  
+    
+// }
+.slider__button-wrap {
+    position: absolute;
+    top:2em;
+    left:2em;
+}
+.slider__slide {
+    position: relative;
+}
 .slider__img {
-    border-radius: 25px;    
+    border-radius: 25px;   
+
     
 }
