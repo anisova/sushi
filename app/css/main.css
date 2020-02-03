@@ -110,9 +110,6 @@ img {
     background-color: #fff;
     border-radius: 15px;
     padding: 0 20px; }
-  @media (max-width: 768px) {
-    .header {
-      display: none; } }
 
 .logo {
   height: 80%; }
@@ -512,7 +509,7 @@ img {
 
 .ham-menu {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   bottom: 0;
   left: 0;
@@ -522,7 +519,7 @@ img {
   -webkit-transition: visibility 0.5s ease;
   -o-transition: visibility 0.5s ease;
   transition: visibility 0.5s ease;
-  background-color: #67c3ce;
+  background-color: rgba(66, 134, 155, 0.9);
   z-index: 10; }
   .ham-menu__list {
     margin-top: 100px;
@@ -583,10 +580,6 @@ img {
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
-
-body.locked {
-  overflow: hidden;
-  height: 100%; }
 
 .tns-outer {
   position: relative; }
