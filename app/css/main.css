@@ -500,6 +500,9 @@ img {
       background-color: #000;
       border-radius: 3px;
       display: block;
+      -webkit-transition-delay: 2s;
+           -o-transition-delay: 2s;
+              transition-delay: 2s;
       -webkit-transition: -webkit-transform 0.7s ease;
       transition: -webkit-transform 0.7s ease;
       -o-transition: transform 0.7s ease;
@@ -523,7 +526,7 @@ img {
   background-color: rgba(66, 134, 155, 0.9);
   z-index: 10; }
   .ham-menu__list {
-    margin-top: 100px;
+    margin-top: 8em;
     -webkit-transform: scale(0, 0);
         -ms-transform: scale(0, 0);
             transform: scale(0, 0);

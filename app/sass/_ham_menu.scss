@@ -3,9 +3,7 @@
     cursor: pointer;   
     height: 30px;   
     display: flex;
-    align-items: center;    
-    // position: absolute;   
-    // left:50%;
+    align-items: center;        
     &__link {
       position: relative;   
       width: 35px;
@@ -22,7 +20,9 @@
         background-color: #000;
         border-radius: 3px;      
         display: block;
+        transition-delay: 2s;
         transition: transform 0.7s ease;
+        
       }
       &::after {
         top: 10px;      
@@ -38,12 +38,11 @@
     overflow: hidden;
     text-align: center;
     visibility: hidden;
-    transition: visibility 0.5s ease;   
+    transition: visibility 0.5s ease;  
     background-color: rgba($accentColor, 0.9);
-    z-index: 10;
-    
+    z-index: 10;    
     &__list{
-    margin-top:100px;
+    margin-top:8em;
     transform: scale(0,0);
     transition: transform 1s ease;
     }    
@@ -94,8 +93,7 @@
       .ham-menu__list {
         transform: scale(1,1);
       }   
-    visibility: visible;    
-    
+    visibility: visible;       
   }
   
   body.locked {
