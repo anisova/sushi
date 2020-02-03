@@ -110,6 +110,9 @@ img {
     background-color: #fff;
     border-radius: 15px;
     padding: 0 20px; }
+  @media (max-width: 768px) {
+    .header__menu {
+      display: none; } }
 
 .logo {
   height: 80%; }
@@ -480,9 +483,7 @@ img {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  left: 50%; }
+          align-items: center; }
   .hamburger__link {
     position: relative;
     width: 35px;
@@ -544,35 +545,36 @@ img {
   .ham-menu__link::after {
     content: '';
     width: 90px;
-    border-bottom: 3px solid #67c3ce;
+    border-bottom: 1px solid #fff;
     position: absolute;
     bottom: -15%;
     left: 50%;
-    opacity: 0;
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    -webkit-transition: opacity 0.8s ease;
-    -o-transition: opacity 0.8s ease;
-    transition: opacity 0.8s ease; }
-  .ham-menu__link:hover::after {
-    opacity: 1; }
+            transform: translate(-50%, 0); }
 
-.hamburger.active .hamburger__link {
-  background-color: transparent;
-  padding-top: 20px; }
-
-.hamburger.active .hamburger__link::before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 50%; }
-
-.hamburger.active .hamburger__link::after {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  bottom: 0; }
+.hamburger.active {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  .hamburger.active .hamburger__link {
+    background-color: transparent;
+    padding-top: 20px; }
+  .hamburger.active .hamburger__link::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 50%;
+    background-color: #fff; }
+  .hamburger.active .hamburger__link::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 0;
+    background-color: #fff; }
 
 .ham-menu.is-active {
   visibility: visible; }
@@ -580,6 +582,10 @@ img {
     -webkit-transform: scale(1, 1);
         -ms-transform: scale(1, 1);
             transform: scale(1, 1); }
+
+body.locked {
+  overflow: hidden;
+  height: 100%; }
 
 .tns-outer {
   position: relative; }

@@ -67,9 +67,11 @@ img {
     border-radius: 15px;
     padding: 0 20px;
   }
-  // @include tablets {
-  //   display: none;
-  // }
+ &__menu {
+   @include tablets {
+    display: none;
+  }
+ } 
 }
 .logo {
   height: 80%;
