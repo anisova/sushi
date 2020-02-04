@@ -3,26 +3,41 @@
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
-    @include tablets {
+    @include middle {
         flex-direction: column;
         align-items: center;
     }
     &__left {
         display: flex;
         align-items: center;
+        @include middle {
+        order: 1;}
     }
     &__button {
         margin: 0 0 0 1em;   
-        position: relative;     
+        position: relative;    
          
+        @include middle {
+            margin: 1em 0;    
+          }       
         
     } 
+    &__toggle {
+        @include phones {
+        width: 33%;}
+        
+    }
     &__right { 
         margin-left: 100px;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         position: relative;
+        @include middle {
+            justify-content: center;
+            order: 0;
+            margin: 0;            
+        }
         &:after {
             content: '';
             position: absolute;            
@@ -31,14 +46,19 @@
             transform: translateY(-50%);
             width: 1px;
             background-color: black;
-            height: 80%;             
+            height: 80%;  
+            @include middle {
+                display: none;}           
         }  
     }
 }
 
-
 .toggle {   
     cursor: pointer;  
+    display: flex;
+    @include phones{
+    justify-content: center;
+    }
     
 &__checkbox {
     display: none;}

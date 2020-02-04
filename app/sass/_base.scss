@@ -111,9 +111,13 @@ img {
   transition:  all 0.5s ease;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(grey, 0.3);
+    box-shadow: 2px 2px 2px rgba(grey, 0.5);
     transition:  all 0.5s ease;
-    border: 1px solid rgba(grey, 0.4);
+    border: 1px solid rgba(grey, 1);
+    background-color: transparent;
+  }
+  @include tablets {
+    font-size: 18px;    
   }
       
 }
@@ -154,10 +158,13 @@ img {
   position: relative;  
   padding: 0 0 0 2em;   
   margin: 3em 0;      
+  @include tablets {    
+    margin: 2em 0;
+  }
   @include phones {
     font-size: 24px;
     padding: 0;
-    margin: 2em 0;
+    
   }
   &:before {
       content: '';
@@ -190,6 +197,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;  
+  @include phones {
+    justify-content: center;
+  }
   &__link {
     height: 15em;
     display: block;   
@@ -216,6 +226,7 @@ img {
     margin-bottom: 2em;
   }  
   &-card {
+    
     @include tablets {
       width: 49%;
     }
@@ -267,6 +278,10 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include phones {
+    justify-content: center;
+  }
+
 }
 .product-card {
 background-color: $whiteColor;
@@ -275,6 +290,9 @@ padding: 1em 2em;
 border-radius: 25px;
 font-size: 14px;
 position: relative;
+@include middle {
+  width: 32%;
+}
 @include tablets {
   width: 49%;
 }
