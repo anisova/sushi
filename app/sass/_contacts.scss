@@ -38,6 +38,12 @@
     &__delivery, &__schedule {
         width: 40%;
         margin-left: 3em;
+        @include tablets {
+            text-align: center;
+            width: 100%;
+            margin-left: 0;
+
+        }
     }     
     &__text {
         margin-bottom: 0.5em;

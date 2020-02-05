@@ -880,6 +880,11 @@ body.locked {
   .contacts__delivery, .contacts__schedule {
     width: 40%;
     margin-left: 3em; }
+    @media (max-width: 768px) {
+      .contacts__delivery, .contacts__schedule {
+        text-align: center;
+        width: 100%;
+        margin-left: 0; } }
   .contacts__text {
     margin-bottom: 0.5em; }
 
