@@ -61,7 +61,7 @@ gulp.task('img', function() {
 gulp.task('prebuild', async function() {
 
     var buildCss = gulp.src('app/css/**/*') // Переносим библиотеки в продакшен
-        git
+        
     .pipe(gulp.dest('dist/css'))
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
