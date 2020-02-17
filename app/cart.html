@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sushi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./css/main.css"> <!-- Подключаем CSS -->
+  <link rel="stylesheet" href="./css/normalize.css"> <!-- Подключаем normalize -->
+</head>
+
+<body>
+  <header class="header wrapper">
+
+    <div class="header__group">
+      <a href="./index.html" class="logo logo-margin">
+        <img src="./img/logo.png" alt="logo">
+      </a>
+      <div class="hamburger">
+        <div class="hamburger__link">
+        </div>
+      </div>
+      <div class="ham-menu">
+        <ul class="ham-menu__list">
+          <li class="ham-menu__item">
+            <a href="#" class="ham-menu__link"> Кухня</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#" class="ham-menu__link"> Меню</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#" class="ham-menu__link"> Доставка</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="#" class="ham-menu__link"> Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="header__menu">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__link">Кухня</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="#" class="menu__link">Меню</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__profile">
+        <ul class="profile">
+          <li class="profile__item">
+            <a href="#" class="profile__link">
+              <svg class="profile__icon" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="profile__item">
+            <a href="#" class="profile__link">
+              <svg class="profile__icon">
+                <use xlink:href='./img/sprite.svg#search'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="profile__item">
+            <a href="#" class="profile__link">
+              <svg class="profile__icon">
+                <use xlink:href='./img/sprite.svg#user'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="profile__item">
+            <a href="#" class="profile__link">
+              <svg class="profile__icon">
+                <use xlink:href='./img/sprite.svg#bag'>
+                </use>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </header>
+  <section class="order wrapper">
+    <h2 class="h2 h2_order">Оформление заказа</h2>
+    <div class="order__group">
+      <div class="order__left">
+        <div class="order__price">
+          <div class="order__price-text order__background">
+            Сумма вашего заказа:
+          </div>
+          <div class="order__sum">
+            600 руб.
+          </div>
+        </div>
+        <div class="order__data order__background">
+          <form action="" class="order__form form">
+            <h3 class="h3 h3_form">
+              Адрес доставки:
+            </h3>
+            <input class="form__input" type="text" placeholder="Улица" autofocus required>
+            <input class="form__input" type="text" placeholder="Дом" required>
+            <input class="form__input" type="text" placeholder="Подъезд">
+            <input class="form__input" type="text" placeholder="Этаж">
+            <input class="form__input" type="text" placeholder="Код домофона">
+            <input class="form__input" type="text" placeholder="Квартира">
+
+            <h3 class="h3">Информация:</h3>
+            <div class="form__info">
+              <input class="form__input" type="text" placeholder="Имя" required>
+              <input class="form__input" type="text" placeholder="Телефон" required>
+              <input class="form__input" type="text" placeholder="E-mail" required>
+
+
+            </div>
+            <div class="form__pay">
+              <p class="form__pay-text">Способ оплаты:</p>
+              <div class="form__pay-methods">
+                <label for="method" class="form__label">
+                  <input type="radio" value="cash" name="radio" class="form__pay-input" id="method" checked>
+                  <div class="form__method">
+                    Наличные
+                  </div>
+                </label>     
+                <label for="method1" class="form__label">
+                  <input type="radio" name="radio" value="card"class="form__pay-input" id="method1">
+                  <div class="form__method">
+                    Карта
+                  </div>
+                </label>   
+                <label for="method2" class="form__label">
+                  <input type="radio" name="radio" value="store" class="form__pay-input" id="method2">
+                  <div class="form__method">
+                    Самовывоз
+                  </div>
+                </label>  
+                <label for="method3" class="form__label">
+                  <input type="radio" name="radio" value="online" class="form__pay-input" id="method3">
+                  <div class="form__method">
+                    Онлайн
+                  </div>
+                </label>   
+
+              </div>
+            </div>
+            <button type="submit" class="form__btn">
+              оформить заказ
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+      <div class="order__right order__background">
+        <div class="order__right-title">
+          <p class="order__cart-title">Корзина</p>
+          <button class="order__reset">
+            очистить корзину
+          </button>
+        </div>
+        <div class="order__cards">
+          <div class="order__card card-background">
+            <div class="order__card-img">
+              <img class="order__card-pic" src="./img/product1.png" alt="">
+            </div>
+            <div class="order__card-desc">
+              <div class="order__card-row">
+                <div class="product-card__title order__roll">
+Филадельфия
+                </div>
+                <div class="order__card-close">
+                  &#215
+                </div>
+              </div>
+              <div class="order__card-row">
+                <div class="order__card-price">
+                  <p class="order__card-sum"> 250 руб.</p>
+                  <p class="order__card-weight">
+                    200 гр.
+                  </p>
+                </div>
+                <div class="cart-counter order__background">
+                  <div class="product-card__counter">
+                    <div class="product-card__sign">
+                      <p class="product-card__minus">-</p>
+                    </div>
+                    <p class="product-card__num">1</p>
+                    <div class="product-card__counter">
+                      <div class="product-card__sign">
+                        <p class="product-card__plus">+</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+          
+        </div>
+        <p class="order__summary">
+          Итого:
+          <span class="order__summary-sum">250 руб.</span> 
+        </p>
+        <button class="form__btn oneclick-btn">Заказать в один клик</button>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section class="s-contacts">
+    <div class="s-contacts__map map__group">
+      <div class="map" id="map">
+
+      </div>
+      <div class="s-contacts__socials socials">
+        <ul class="socials__group">
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link_vk">
+              <svg class="socials__icon" viewBox="0 0 24 24">
+                <use xlink:href='./img/sprite.svg#vk'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link_f">
+              <svg class="socials__icon" viewBox="0 0 24 24">
+                <use xlink:href='./img/sprite.svg#f'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link socials__link_insta">
+              <svg class="socials__icon" viewBox="0 0 24 24">
+                <use xlink:href='./img/sprite.svg#i'>
+                </use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="s-contacts__group contacts">
+      <div class="contacts__delivery">
+        <h3 class="h3">доставка</h3>
+        <p class="contacts__text">Минимальная сумма заказа
+          на доставку 500 руб</p>
+        <!-- <p class="contacts__text">Доставка: 11:00 - 23:00</p> -->
+        <p class="contacts__text">Прием заказов на доставку и
+          самовывоз заканчивается в
+          23:00</p>
+
+      </div>
+      <div class="contacts__schedule">
+        <h3 class="h3">Режим работы</h3>
+        <p class="contacts__text">
+          Доставка: <strong> 11:00 - 23:00 </strong><br>
+          Ресторан: <strong>11:00 - 00:00</strong><br>
+          Пт, Сб: <strong>11:00 - 01:00</strong>
+        </p>
+        <h3 class="h3">AДРЕС</h3>
+        <p class="contacts__text">
+          г. Москва, ул. Валовая, 6
+          sushi@gmail.com
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="./js/main.js">
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
+
+  <script src="./js/map.js" type="text/javascript">
+  </script>
+
+
+
+</body>
