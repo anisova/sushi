@@ -1,0 +1,44 @@
+.overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 50, 52, 0.6);
+    display: none;
+    
+}
+
+.favorites {
+    width: 75%;
+    height: 80vh;
+    overflow: auto;
+    margin: 10vh auto;
+    background-color: $baseColor;
+    padding: 2em;
+    border-radius: 15px;
+    // position: relative;  
+    &__cards {
+        display: flex;        
+        flex-wrap: wrap;
+    }  
+    &__h2 {        
+            font-size: 32px;
+            color: $pinkColor;
+            &:after {
+                border-color:$pinkColor;
+            }                
+        margin: 0 0 2em 0;
+    }
+    &__close {
+        position: absolute;
+        cursor: pointer;
+        font-size: 60px;
+        top: 2rem;
+        right: 1rem;
+        line-height: 0;
+        color: $whiteColor;        
+    }
+
+}

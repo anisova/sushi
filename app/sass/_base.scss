@@ -143,6 +143,7 @@ img {
     &:hover {
       stroke: gray;
     }
+    
   }
 }
 .separator {
@@ -387,6 +388,10 @@ position: relative;
 }
 &__heart {
   cursor: pointer;
+  &.active{
+    fill:$pinkColor;
+    stroke:$pinkColor;
+  }
 }
 
 &__counter {

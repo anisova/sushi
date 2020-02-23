@@ -455,6 +455,9 @@ img {
     stroke: white; }
   .product-card__heart {
     cursor: pointer; }
+    .product-card__heart.active {
+      fill: #ff6b4f;
+      stroke: #ff6b4f; }
   .product-card__counter {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1162,3 +1165,44 @@ body.locked {
 
 .oneclick-btn {
   width: 90%; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.6);
+  display: none; }
+
+.favorites {
+  width: 75%;
+  height: 80vh;
+  overflow: auto;
+  margin: 10vh auto;
+  background-color: #ededed;
+  padding: 2em;
+  border-radius: 15px; }
+  .favorites__cards {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .favorites__h2 {
+    font-size: 32px;
+    color: #ff6b4f;
+    margin: 0 0 2em 0; }
+    .favorites__h2:after {
+      border-color: #ff6b4f; }
+  .favorites__close {
+    position: absolute;
+    cursor: pointer;
+    font-size: 60px;
+    top: 2rem;
+    right: 1rem;
+    line-height: 0;
+    color: #fff; }
