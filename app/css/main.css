@@ -172,7 +172,8 @@ img {
   .profile :last-child {
     margin-right: 0; }
   .profile__item {
-    margin-right: 20px; }
+    margin-right: 20px;
+    position: relative; }
   .profile__icon {
     width: 25px;
     height: 25px;
@@ -184,6 +185,38 @@ img {
     display: block; }
     .profile__icon:hover {
       stroke: gray; }
+
+.search {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 0px;
+  border: none;
+  border-bottom: 0.5px solid #b1afaf;
+  outline: none;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .search::-webkit-input-placeholder {
+    color: #bebdbd; }
+  .search::-moz-placeholder {
+    color: #bebdbd; }
+  .search:-ms-input-placeholder {
+    color: #bebdbd; }
+  .search::-ms-input-placeholder {
+    color: #bebdbd; }
+  .search::placeholder {
+    color: #bebdbd; }
+
+.search-active {
+  width: 250px;
+  left: -250px;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease; }
 
 .separator {
   background: url("../img/separator.png") no-repeat center bottom/cover;
@@ -231,6 +264,12 @@ img {
     @media (max-width: 768px) {
       .h2:after {
         width: 30%; } }
+  .h2_pink {
+    font-size: 32px;
+    color: #ff6b4f;
+    margin: 1em 0 2em 0; }
+    .h2_pink:after {
+      border-color: #ff6b4f; }
 
 .sushi {
   display: -webkit-box;
@@ -309,10 +348,7 @@ img {
     .sushi-card_set {
       background-image: url("../img/set.jpg"); }
 
-.hits__card {
-  margin-bottom: 2em; }
-
-.hits__group {
+.cards__group {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -325,7 +361,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   @media (max-width: 480px) {
-    .hits__group {
+    .cards__group {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
@@ -337,7 +373,8 @@ img {
   padding: 1em 2em;
   border-radius: 25px;
   font-size: 14px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 1em; }
   @media (max-width: 1000px) {
     .product-card {
       width: 32%; } }
@@ -469,7 +506,7 @@ img {
             align-items: center; }
   .product-card__num {
     margin: 0 1em; }
-  .product-card__sign {
+  .product-card__sign-minus, .product-card__sign-plus {
     border: 1px solid white;
     border-radius: 50%;
     width: 2em;
@@ -497,6 +534,16 @@ img {
   font-family: 'COCOMAT',sans-serif;
   font-weight: 600;
   margin: 2em 0 1em 0; }
+
+.o-fav, .o-delivery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.6);
+  display: none; }
 
 .hamburger {
   z-index: 20;
@@ -1166,17 +1213,7 @@ body.locked {
 .oneclick-btn {
   width: 90%; }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(47, 50, 52, 0.6);
-  display: none; }
-
-.favorites {
+.o-container {
   width: 75%;
   height: 80vh;
   overflow: auto;
@@ -1184,25 +1221,43 @@ body.locked {
   background-color: #ededed;
   padding: 2em;
   border-radius: 15px; }
-  .favorites__cards {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-  .favorites__h2 {
-    font-size: 32px;
-    color: #ff6b4f;
-    margin: 0 0 2em 0; }
-    .favorites__h2:after {
-      border-color: #ff6b4f; }
-  .favorites__close {
-    position: absolute;
-    cursor: pointer;
-    font-size: 60px;
-    top: 2rem;
-    right: 1rem;
-    line-height: 0;
-    color: #fff; }
+
+.favorites__cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.o-fav__close, .o-delivery__close {
+  position: absolute;
+  cursor: pointer;
+  font-size: 60px;
+  top: 2rem;
+  right: 1rem;
+  line-height: 0;
+  color: #fff; }
+
+.o-delivery__group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.o-delivery__right {
+  width: 70%; }
+
+.o-delivery__methods {
+  width: auto; }
+
+.o-delivery__label {
+  width: 120px; }
+
+.contacts__o-delivery {
+  width: 90%;
+  margin-left: 0; }
+
+.o-delivery__method {
+  background-color: #fff; }

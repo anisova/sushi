@@ -1,0 +1,24 @@
+
+.o-delivery__group {
+    display: flex;
+    
+}
+.o-delivery__right {
+    width: 70%;
+}
+
+.o-delivery__methods {
+    width: auto;
+    // justify-content: start;
+
+}
+.o-delivery__label {
+    width: 120px;
+}
+.contacts__o-delivery {
+    width: 90%;
+    margin-left: 0;
+}
+.o-delivery__method {
+    background-color: $whiteColor;
+}

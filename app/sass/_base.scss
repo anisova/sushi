@@ -123,6 +123,7 @@ img {
   }
       
 }
+
 .profile {
   display: flex;
   & :last-child {
@@ -130,6 +131,7 @@ img {
   }
   &__item {
     margin-right: 20px;
+    position: relative;
     }
   &__icon {
     width: 25px;
@@ -142,10 +144,30 @@ img {
     display: block;
     &:hover {
       stroke: gray;
-    }
-    
+    }    
   }
 }
+.search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0px;
+  border: none;
+  border-bottom: 0.5px solid rgb(177, 175, 175);
+  outline: none;
+  transition: all 1s ease;
+  &::placeholder {
+    color: #bebdbd;
+}}
+.search-active {
+  width: 250px;
+  left:-250px;
+  transition: all 0.7s ease;
+}
+  
+  
+
 .separator {
   background: url('../img/separator.png') no-repeat center bottom/cover;
   margin: 3% 0;
@@ -197,7 +219,16 @@ img {
       width: 30%;
     }
   }
+  &_pink {        
+    font-size: 32px;
+    color: $pinkColor;
+    &:after {
+        border-color:$pinkColor;
+    }                
+margin: 1em 0 2em 0;
 }
+}
+
   
 .sushi {
   display: flex;
@@ -277,10 +308,8 @@ img {
     }
 }
 
-.hits__card  {
-  margin-bottom: 2em;
-}
-.hits__group {
+
+.cards__group {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -296,6 +325,8 @@ padding: 1em 2em;
 border-radius: 25px;
 font-size: 14px;
 position: relative;
+// margin-right: 0.5em;
+margin-bottom: 1em;
 @include middle {
   width: 32%;
 }
@@ -401,7 +432,8 @@ position: relative;
 &__num {
   margin: 0 1em;
 }
-&__sign {
+&__sign-minus,
+&__sign-plus{
   border: 1px solid white;
   border-radius: 50%; 
   width: 2em;
@@ -422,4 +454,16 @@ position: relative;
   font-family: 'COCOMAT',sans-serif;
   font-weight: 600;
   margin: 2em 0 1em 0;
+}
+
+.o-fav, .o-delivery {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.6);
+  display: none;
+  
 }

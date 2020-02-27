@@ -5,168 +5,163 @@
   <meta charset="UTF-8">
   <title>Sushi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link rel="stylesheet" href="./css/tiny-slider.css">
   <link rel="stylesheet" href="./css/main.css"> <!-- Подключаем CSS -->
   <link rel="stylesheet" href="./css/normalize.css"> <!-- Подключаем normalize -->
 </head>
 
-<body>  
-    <header class="header wrapper">      
-        
-      <div class="header__group">
-        <a href="#" class="logo logo-margin">
-          <img src="./img/logo.png" alt="logo">
-        </a>
-        <div class="hamburger">
-          <div class="hamburger__link">
-          </div>
-        </div>   
-      <div class="ham-menu">
-          <ul class="ham-menu__list">
-            <li class="ham-menu__item">
-              <a href="#" class="ham-menu__link"> Главная</a>
-            </li>
-            <li class="ham-menu__item">
-              <a href="#" class="ham-menu__link"> Меню</a>
-            </li>
-            <li class="ham-menu__item">
-              <a href="#" class="ham-menu__link"> Доставка</a>
-            </li>
-            <li class="ham-menu__item">
-              <a href="#" class="ham-menu__link"> Контакты</a>
-            </li>
-          </ul>
-    
-    
-  </div>
+<body>
+  <header class="header wrapper">
 
-        <nav class="header__menu">
-          <ul class="menu">
-            <li class="menu__item">
-              <a href="#" class="menu__link">Главная</a>
-            </li>
-            
-            <li class="menu__item">
-              <a href="#" class="menu__link">Меню</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">Доставка</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__profile">
-          <ul class="profile">
-            <li class="profile__item">
-              <a href="#" class="profile__link">
-                <svg class="profile__icon heart" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href='./img/sprite.svg#heart'>
-                  </use>
-                </svg>
-              </a>
-            </li>
-            <li class="profile__item">
-              <a href="#" class="profile__link">
-                <svg class="profile__icon">
-                  <use xlink:href='./img/sprite.svg#search'>
-                  </use>
-                </svg>
-              </a>
-            </li>
-            <li class="profile__item">
-              <a href="#" class="profile__link">
-                <svg class="profile__icon">
-                  <use xlink:href='./img/sprite.svg#user'>
-                  </use>
-                </svg>
-              </a>
-            </li>
-            <li class="profile__item">
-              <a href="./cart.html" class="profile__link">
-                <svg class="profile__icon">
-                  <use xlink:href='./img/sprite.svg#bag'>
-                  </use>
-                </svg>
-              </a>
-            </li>
-
-          </ul>
-
+    <div class="header__group">
+      <a href="#" class="logo logo-margin">
+        <img src="./img/logo.png" alt="logo">
+      </a>
+      <div class="hamburger">
+        <div class="hamburger__link">
         </div>
       </div>
-    </header>
+      <div class="ham-menu">
+        <ul class="ham-menu__list">
+          <li class="ham-menu__item">
+            <a href="#" class="ham-menu__link"> Главная</a>
+          </li>
+          <li class="ham-menu__item">
+            <a href="./menu.html" class="ham-menu__link"> Меню</a>
+          </li>          
+          <li class="ham-menu__item">
+            <a href="#contacts" class="ham-menu__link"> Контакты</a>
+          </li>
+        </ul>
 
 
-    <section class="cook wrapper" id="cook">
-      <div class="slider">
-        <div class="slider__slide_1">
+      </div>
+
+      <nav class="header__menu">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Главная</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./menu.html" class="menu__link">Меню</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link delivery-link">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contacts" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__profile">
+        <ul class="profile">
+          <li class="profile__item">
+            <div>
+            <input type="text " class="search" placeholder="Найти">
+              
+    
+            </div>
+            <a href="#" class="profile__link ">
+              <svg class="profile__icon search-icon">
+                <use xlink:href='./img/sprite.svg#search'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          <li class="profile__item">
+            <a href="#" class="profile__link">
+              <svg class="profile__icon heart" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </a>
+          </li>
+          
+          
+          <li class="profile__item">
+            <a href="./cart.html" class="profile__link">
+              <svg class="profile__icon">
+                <use xlink:href='./img/sprite.svg#bag'>
+                </use>
+              </svg>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+
+  <section class="cook wrapper" id="cook">
+    <div class="slider">
+      <div class="slider__slide_1">
         <div class="slider__button-wrap">
-          <a href="#" class="slider__button button-menu">
+          <a href="./menu.html" class="slider__button button-menu">
             Меню
-          </a>      
-          </div>   
+          </a>
         </div>
-        <div class="slider__slide_2">
+      </div>
+      <div class="slider__slide_2">
         <div class="slider__button-wrap">
-          <a href="#" class="slider__button button-menu">
+          <a href="./menu.html" class="slider__button button-menu">
             Меню
-          </a>      
-          </div>   
+          </a>
         </div>
-        <div class="slider__slide_3">
+      </div>
+      <div class="slider__slide_3">
         <div class="slider__button-wrap">
-          <a href="#" class="slider__button button-menu">
+          <a href="./" class="slider__button button-menu">
             Меню
-          </a>      
-          </div>   
+          </a>
         </div>
+      </div>
 
-    </section>  
-
+  </section>
 
   <section class="sushi-menu wrapper">
     <h2 class="h2 sushi-menu__tittle">Sushi меню</h2>
     <div class="sushi-menu__group sushi">
       <div class="sushi__item sushi-card sushi-card_sushi">
-        <a href="#" class="sushi__link">
+        <a href="./menu.html#sushi" class="sushi__link">
           <p class="sushi-card__title ">
             Суши
           </p>
         </a>
       </div>
       <div class="sushi__item sushi-card sushi-card_roll">
-        <a href="#" class="sushi__link">
+        <a href="./menu.html#rolls" class="sushi__link">
           <p class="sushi-card__title ">
             Роллы
           </p>
         </a>
       </div>
       <div class="sushi__item sushi-card sushi-card_soup">
-        <a href="#" class="sushi__link">
+        <a href="./menu.html#soups" class="sushi__link">
           <p class="sushi-card__title ">
             Супы
           </p>
         </a>
       </div>
       <div class="sushi__item sushi-card sushi-card_starters">
-        <a href="#" class="sushi__link">
+        <a href="./menu.html#starters" class="sushi__link">
           <p class="sushi-card__title ">
             Закуски
           </p>
         </a>
       </div>
       <div class="sushi__item sushi-card sushi-card_set">
-        <a href="#" class="sushi__link">
+        <a href="./menu.html#sets" class="sushi__link">
           <p class="sushi-card__title ">
             Сеты
           </p>
         </a>
       </div>
       <div class="sushi__item sushi-card sushi-card_drinks">
-        <a href="#" class="sushi__link">
+        <a href="./menu.html#drinks" class="sushi__link">
           <p class="sushi-card__title ">
             Напитки
           </p>
@@ -176,9 +171,9 @@
   </section>
   <section class="hits wrapper">
     <h2 class="h2 sushi-menu__tittle">Sushi хиты</h2>
-    <div class="hits__group">
+    <div class="cards__group">
       <!-- Карточка продукта -->
-      <div class="hits__card product-card" data-card='1' >
+      <div class=" product-card" data-card='r1'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -209,12 +204,12 @@
               250 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -226,19 +221,19 @@
                   </use>
                 </svg>
               </a>
-<a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+              <a href="#" class="product-card__favlink">
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="hits__card product-card" data-card='2'>
+      <div class=" product-card" data-card='r2'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -269,12 +264,12 @@
               230 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -287,17 +282,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='3'>
+      <div class=" product-card" data-card='r3'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -328,12 +323,12 @@
               280 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -346,17 +341,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='4'>
+      <div class=" product-card" data-card='r4'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             авокадо
@@ -387,12 +382,12 @@
               200 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -405,17 +400,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='5'>
+      <div class=" product-card" data-card='r5'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -446,12 +441,12 @@
               200 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -464,17 +459,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='6'>
+      <div class=" product-card" data-card='r6'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -505,12 +500,12 @@
               250 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -523,17 +518,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='7'>
+      <div class=" product-card" data-card='r7'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -564,12 +559,12 @@
               230 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -582,17 +577,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='8'>
+      <div class=" product-card" data-card='r8'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -623,12 +618,12 @@
               280 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -641,17 +636,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='9'>
+      <div class=" product-card" data-card='r9'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             авокадо
@@ -682,12 +677,12 @@
               200 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -700,17 +695,17 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
 
       </div>
-      <div class="hits__card product-card" data-card='10'>
+      <div class=" product-card" data-card='r10'>
         <div class="product-card__desc">
           <p class="product-card__ingridient">
             лосось
@@ -741,12 +736,12 @@
               200 руб.
             </p>
             <div class="product-card__counter">
-              <div class="product-card__sign">
+              <div class="product-card__sign-minus">
                 <p class="product-card__minus">-</p>
               </div>
               <p class="product-card__num">1</p>
               <div class="product-card__counter">
-                <div class="product-card__sign">
+                <div class="product-card__sign-plus">
                   <p class="product-card__plus">+</p>
                 </div>
               </div>
@@ -759,11 +754,11 @@
                 </svg>
               </a>
               <a href="#" class="product-card__favlink">
-              <svg class="profile__icon product-card__heart">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
+                <svg class="profile__icon product-card__heart">
+                  <use xlink:href='./img/sprite.svg#heart'>
+                  </use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -835,10 +830,10 @@
       </label>
     </div>
   </section>
-  <section class="s-contacts">
+  <section class="s-contacts" id="contacts">
     <div class="s-contacts__map map__group">
       <div class="map" id="map">
-        
+
       </div>
       <div class="s-contacts__socials socials">
         <ul class="socials__group">
@@ -868,7 +863,7 @@
           </li>
         </ul>
       </div>
-    </div>    
+    </div>
 
     <div class="s-contacts__group contacts">
       <div class="contacts__delivery">
@@ -900,20 +895,94 @@
 
   </section>
 
-<div class="overlay">
-  <div class="favorites__close">
-    &#215
+  <div class="o-fav">
+    <div class="o-fav__close">
+      &#215
+    </div>
+    <div class="o-container">
+      <h2 class="h2 h2_pink">Избранное</h2>
+      <div class="favorites__cards">
+      </div>
+    </div>
   </div>
-<div class="favorites">
-  <h2 class="h2 favorites__h2" >Избранное</h2>
-  <div class="favorites__cards">   
-    
+
+
+  <div class="o-delivery">
+    <div class="o-delivery__close">
+      &#215
+    </div>
+    <div class="o-container">
+    <h2 class="h2 h2_pink">доставка</h2>
+    <div class="o-delivery__group">
+      <div class="o-delivery__left">
+        <div class="contacts__delivery contacts__o-delivery">
+          <h3 class="h3">доставка</h3>
+          <p class="contacts__text">Минимальная сумма заказа
+            на доставку 500 руб</p>
+          <!-- <p class="contacts__text">Доставка: 11:00 - 23:00</p> -->
+          <p class="contacts__text">Прием заказов на доставку и
+            самовывоз заканчивается в
+            23:00</p>
+  
+        </div>
+        <div class="contacts__schedule contacts__o-delivery">
+          <h3 class="h3">Режим работы</h3>
+          <p class="contacts__text">
+            Доставка: <strong> 11:00 - 23:00 </strong><br>
+            Ресторан: <strong>11:00 - 00:00</strong><br>
+            Пт, Сб: <strong>11:00 - 01:00</strong>
+          </p>
+          
+          
+        </div>
+      </div>
+      <div class="o-delivery__right">
+        <h3 class="h3">Способы оплаты:</h3>          
+          <div class="form__pay-methods o-delivery__methods">
+            <label for="method" class="form__label o-delivery__label">
+              <input type="radio" value="cash" name="radio" class="form__pay-input" id="method" checked>
+              <div class="form__method o-delivery__method">
+                Наличные
+              </div>
+            </label>     
+            <label for="method1" class="form__label o-delivery__label">
+              <input type="radio" name="radio" value="card"class="form__pay-input" id="method1">
+              <div class="form__method o-delivery__method">
+                Карта
+              </div>
+            </label>   
+            <label for="method2" class="form__label o-delivery__label">
+              <input type="radio" name="radio" value="store" class="form__pay-input" id="method2">
+              <div class="form__method o-delivery__method">
+                Самовывоз
+              </div>
+            </label>  
+            <label for="method3" class="form__label o-delivery__label">
+              <input type="radio" name="radio" value="online" class="form__pay-input" id="method3">
+              <div class="form__method o-delivery__method">
+                Онлайн
+              </div>
+            </label>   
+<p >Платежи принимаются по следующим банковским картам: Visa, Visa Electron, MasterCard,  Maestro. <br>
+  <span> <b> Рассрочка действует только при оплате через сайт! </span>
+  </p>
+
+          </div>
+        
+
+      </div>      
+      
+    </div>
   </div>
+</div>
+
+
+
   
 
-</div>  
- </div>
-<script src="./js/main.js">
+
+
+  <script src="./js/main.js">
   </script>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
@@ -922,7 +991,7 @@
   <script src="./js/map.js" type="text/javascript">
   </script>
 
-  
+
   <script src="./js/tiny-slider.js">
   </script>
   <script type="text/javascript">
@@ -939,7 +1008,7 @@
       controlsText: ["&#60", "&#62"],
       nav: false
     });
-  </script>  
+  </script>
 
 
   <div class="cart">

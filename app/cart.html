@@ -57,16 +57,13 @@
       <div class="header__profile">
         <ul class="profile">
           <li class="profile__item">
-            <a href="#" class="profile__link">
-              <svg class="profile__icon" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href='./img/sprite.svg#heart'>
-                </use>
-              </svg>
-            </a>
-          </li>
-          <li class="profile__item">
-            <a href="#" class="profile__link">
-              <svg class="profile__icon">
+            <div>
+            <input type="text " class="search" placeholder="Найти">
+              
+    
+            </div>
+            <a href="#" class="profile__link ">
+              <svg class="profile__icon search-icon">
                 <use xlink:href='./img/sprite.svg#search'>
                 </use>
               </svg>
@@ -74,12 +71,21 @@
           </li>
           <li class="profile__item">
             <a href="#" class="profile__link">
+              <svg class="profile__icon" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href='./img/sprite.svg#heart'>
+                </use>
+              </svg>
+            </a>
+          </li>
+         
+          <!-- <li class="profile__item">
+            <a href="#" class="profile__link">
               <svg class="profile__icon">
                 <use xlink:href='./img/sprite.svg#user'>
                 </use>
               </svg>
             </a>
-          </li>
+          </li> -->
           <li class="profile__item">
             <a href="#" class="profile__link">
               <svg class="profile__icon">
@@ -95,7 +101,7 @@
     </div>
   </header>
   <section class="order wrapper">
-    <h2 class="h2 h2_order">Оформление заказа</h2>
+    <h2 class="h2 h2_pink">Оформление заказа</h2>
     <div class="order__group">
       <div class="order__left">
         <div class="order__price">
@@ -172,7 +178,7 @@
           </button>
         </div>
         <div class="order__cards">
-          <!-- <div class="order__card card-background">
+          <div class="order__card card-background">
             <div class="order__card-img">
               <img class="order__card-pic" src="./img/product1.png" alt="">
             </div>
@@ -208,7 +214,7 @@
 
               </div>
             </div>
-          </div> -->
+          </div>
           
 
 
