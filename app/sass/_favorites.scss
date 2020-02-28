@@ -7,15 +7,30 @@
     margin: 10vh auto;
     background-color: $baseColor;
     padding: 2em;
-    border-radius: 15px;
-    // position: relative;      
+    border-radius: 15px;   
+    @include tablets {
+        width: 90vw;
+        height: 90vh;
+    }   
     
 
 }
 .favorites__cards {
     display: flex;        
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 1em 0;    
 }  
+.favorite__card {
+    width: 30%;
+    margin: 0 1em 1em 0;
+    @include middle {
+        width: 45%;        
+    }
+    @include phones {
+        width: 80%;        
+    }
+}
 .o-fav__close, .o-delivery__close {
     position: absolute;
     cursor: pointer;

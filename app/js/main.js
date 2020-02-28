@@ -102,8 +102,7 @@ function cardClone(card) {
   const cardNew = card.cloneNode(true); //клонируем карточку в избранное
   const btnDel = cardNew.querySelector(".product-card__favlink"); //находим кнопку heart в карточке в Избранном
   cardNew.classList.add("favorite__card"); //добавляем класс к карточке в Избранном
-  cardNew.style.width = "24%"; //устанавливаем ширину карточки
-  cardNew.style.margin = "0 1em 1em 0"; // устанавливаем отступы
+
   btnDel.addEventListener("click", e => {
     //ловим клик на кнопке heart удаления из избранного
     if ((e.target.tagName = "use") || (e.target.tagName = "svg")) {
