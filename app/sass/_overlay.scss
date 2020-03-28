@@ -34,3 +34,9 @@
 
 }
 
+.o-cart__close
+ {
+     @include phones {
+         color:black;
+     }
+ }

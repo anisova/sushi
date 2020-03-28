@@ -506,6 +506,11 @@ margin-bottom: 1em;
       width: 90vw;
       height: 90vh;
   }   
+  @include phones {
+    border-radius: 0;
+    height: 100vh;
+    margin: 0;
+}
 }
 .fav-counter, .cart-count {
   padding: 0 6px;

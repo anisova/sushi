@@ -573,6 +573,11 @@ img {
     .o-container {
       width: 90vw;
       height: 90vh; } }
+  @media (max-width: 520px) {
+    .o-container {
+      border-radius: 0;
+      height: 100vh;
+      margin: 0; } }
 
 .fav-counter, .cart-count {
   padding: 0 6px;
@@ -1024,6 +1029,11 @@ body.locked {
   padding: 2em;
   width: 90vw;
   height: 90vh; }
+  @media (max-width: 520px) {
+    .order {
+      padding: 10px;
+      width: 100vw;
+      height: 100vh; } }
   .order__group {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1384,6 +1394,10 @@ body.locked {
   @media (max-width: 520px) {
     .o-fav__close, .o-delivery__close, .o-cart__close {
       font-size: 30px; } }
+
+@media (max-width: 520px) {
+  .o-cart__close {
+    color: black; } }
 
 .o-delivery__group {
   display: -webkit-box;
