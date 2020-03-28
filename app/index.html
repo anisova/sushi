@@ -72,20 +72,28 @@
           </li>
           <li class="profile__item">
             <a href="#" class="profile__link">
+              
+              
               <svg class="profile__icon heart" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href='./img/sprite.svg#heart'>
                 </use>
               </svg>
+            
+              <div class=" fav-counter">
+                0
+              </div>
             </a>
-          </li>
-          
+          </li>          
           
           <li class="profile__item">
-            <a href="./cart.html" class="profile__link">
-              <svg class="profile__icon">
+            <a href="#" class="profile__link">
+              <svg class="profile__icon bag">
                 <use xlink:href='./img/sprite.svg#bag'>
                 </use>
               </svg>
+              <div class="cart-count">
+                0
+              </div>
             </a>
           </li>
 
@@ -895,7 +903,7 @@
 
   </section>
 
-  <div class="o-fav">
+  <div class="overlay o-fav">
     <div class="o-fav__close">
       &#215
     </div>
@@ -906,8 +914,121 @@
     </div>
   </div>
 
+<div class='overlay o-cart'>
+  <div class="o-cart__close">
+    ×
+  </div>
+  <div class=" wrapper o-container order">
+    <h2 class="h2 h2_pink">Оформление заказа</h2>
+    <div class="order__group">
+      <div class="order__left">
+        <div class="order__price">
+          <div class="order__price-text order__background">
+            Сумма вашего заказа:
+          </div>
+          <div class="order__sum">
+            600 руб.
+          </div>
+        </div>
+        <div class="order__data order__background">
+          <form action="" class="order__form form">
+            <h3 class="h3 h3_form">
+              Адрес доставки:
+            </h3>
+            <input class="form__input" type="text" placeholder="Улица" autofocus required>
+            <input class="form__input" type="text" placeholder="Дом" required>
+            <input class="form__input" type="text" placeholder="Подъезд">
+            <input class="form__input" type="text" placeholder="Этаж">
+            <input class="form__input" type="text" placeholder="Код домофона">
+            <input class="form__input" type="text" placeholder="Квартира">
 
-  <div class="o-delivery">
+            <h3 class="h3">Информация:</h3>
+            <div class="form__info">
+              <input class="form__input" type="text" placeholder="Имя" required>
+              <input class="form__input" type="text" placeholder="Телефон" required>
+              <input class="form__input" type="text" placeholder="E-mail" required>
+
+
+            </div>
+            <div class="form__pay">
+              <p class="form__pay-text">Способ оплаты:</p>
+              <div class="form__pay-methods">
+                <label for="method" class="form__label">
+                  <input type="radio" value="cash" name="radio" class="form__pay-input" id="method" checked>
+                  <div class="form__method">
+                    Наличные
+                  </div>
+                </label>     
+                <label for="method1" class="form__label">
+                  <input type="radio" name="radio" value="card"class="form__pay-input" id="method1">
+                  <div class="form__method">
+                    Карта
+                  </div>
+                </label>   
+                <label for="method2" class="form__label">
+                  <input type="radio" name="radio" value="store" class="form__pay-input" id="method2">
+                  <div class="form__method">
+                    Самовывоз
+                  </div>
+                </label>  
+                <label for="method3" class="form__label">
+                  <input type="radio" name="radio" value="online" class="form__pay-input" id="method3">
+                  <div class="form__method">
+                    Онлайн
+                  </div>
+                </label>   
+
+              </div>
+            </div>
+            <button type="submit" class="form__btn">
+              оформить заказ
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+      <div class="order__right order__background">
+        <div class="order__right-title">
+          <p class="order__cart-title">Корзина</p>
+          <button class="order__reset">
+            очистить корзину
+          </button>
+        </div>
+        <div class="order__cards">
+          
+        </div>
+        <p class="order__summary">
+          Итого:
+          <span class="order__summary-sum">0 руб.</span> 
+        </p>
+        <button class="form__btn oneclick-btn">Заказать в один клик</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="overlay o-delivery ">
     <div class="o-delivery__close">
       &#215
     </div>
@@ -978,7 +1099,50 @@
 
 
 
-  
+<script type="template" class="cartProduct">   
+  <div class="order__card card-background">
+    <div class="order__card-img">
+      <img class="order__card-pic" src="" alt="">
+    </div>
+    <div class="order__card-desc">
+      <div class="order__card-row">
+        <div class="product-card__title order__roll">
+
+        </div>
+        <div class="order__card-close">
+          &#215
+        </div>
+      </div>
+      <div class="order__card-row">
+        <div class="order__card-price">
+          <p class="order__card-sum"> </p>
+          <p class="order__card-num">
+            
+          </p>
+        </div>  
+
+
+
+
+
+        <div class="cart-counter order__background">
+          <div class="product-card__counter">
+            <div class="product-card__sign-minus">
+              <p class="product-card__minus">-</p>
+            </div>
+            <p class="order__card-count product-card__num">1</p>
+            <div class="product-card__counter ">
+              <div class="product-card__sign-plus">
+                <p class="product-card__plus">+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</script>
 
 
 

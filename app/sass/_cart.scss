@@ -12,20 +12,35 @@
 
 }
 .order {
+    background-color: $baseColor;
+        padding: 2em;
+        width: 90vw;
+        height: 90vh;
     &__group {
         display: flex;   
-        justify-content: space-between;     
+        justify-content: space-between; 
+        @include middle {
+            flex-direction: column;
+        }    
+        
     }
     &__left  {
-        width: 60%;
+        width: 55%;
+        @include middle {
+        width: 100%;
     }
+    }
+    
     &__right {
-        width: 38%;      
+        width: 43%;      
         text-align: center;  
         &-title {
             display: flex;
             justify-content: space-between;
             margin: 1em 1em 2em 1em;
+        }
+        @include middle {
+            width: 100%;
         }
     } 
     &__price {
@@ -33,16 +48,23 @@
         justify-content: space-between; 
         align-items: center;
         &-text {
-            width: 80%;            
+            width: 75%;            
             font-size: 20px;
             font-family: "COCOMAT", 'san-serif';
             text-transform: uppercase;    
-            padding: 1em 0 1em 2em;
+            padding: 1em 0 1em 1em;
+            @include tablets {
+                font-size: 18px;
+            }
+            @include phones {
+                font-size: 14px;
+            }
+            
         }             
     }
     &__sum {
         background-color: $accentColor2;
-        width: 18%;
+        width: 23%;
         display: inline-block;
         border-radius: 15px;
         padding: 0.5em 0;
@@ -51,6 +73,12 @@
         font-size: 20px;
         padding: 1em 0;
         text-align: center;
+        @include tablets {
+            font-size: 18px;
+        }
+        @include phones {
+            font-size: 14px;
+        }
         
     }
 &__reset {    
@@ -65,6 +93,10 @@ font-size: 16px;
         text-align: center;        
         outline: none;
         border: none;     
+        @include phones {
+            font-size: 13px;
+            padding: 0.2em 0.5em;
+        }
      
 }
 &__cart-title {
@@ -79,25 +111,44 @@ font-size: 16px;
     justify-content: space-between;
     margin: 1em;    
     padding: 1em;
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+
+    }
     &-img {
         width: 30%;
         border-radius: 15px;
         background-color: #fff;
+        @include phones {
+            flex-direction: column;
+            order: 2;
+            width: 80%;
+            
+        }
     }  
     
+    
     &-desc  {
-        width: 68%;
+        width: 65%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include phones {
+            width: 100%;
+        }
     }
     &-row   {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include phones {
+            width: 100%;
+            margin-bottom: 1em;
+        }
     }
     &-price {
-        text-align: center;
+        text-align: left;
     }
     &-sum {
         font-weight: 600;        
@@ -131,6 +182,7 @@ font-size: 20px;
     background-color: $baseColor;
 border-radius: 15px;
 }
+
 .h3_form {
     margin-top: 0;
 }
@@ -148,6 +200,9 @@ border-radius: 15px;
         &::placeholder {
             color: #bebdbd;
         }
+        @include tablets {
+            width: 100%;
+        }
     }
     &__pay {
         display: flex;
@@ -163,6 +218,10 @@ border-radius: 15px;
     &__info {
         display: flex;
         justify-content: space-between;
+        @include tablets {
+flex-direction: column;
+align-items: flex-start;
+        }
     }
     &__pay-input:checked ~.form__method{
         background-color: $accentColor2;
@@ -173,11 +232,19 @@ border-radius: 15px;
         justify-content: space-between;
         width: 50%;
         flex-wrap: wrap;
+        @include phones {
+            flex-direction: column;
+            align-items: flex-start;
+                    }
+
     }
     &__label {
         width: 48%;
         margin-bottom: 1em;
         text-align: center;
+        @include phones {
+            width: 80%;
+        }
     }
     &__method {
         padding: 0.5em;
@@ -205,4 +272,8 @@ font-size: 16px;
 .oneclick-btn {
     width: 90%;    
 }
-
+.order__card-num {
+    @include phones {
+        display: none;
+    }
+}

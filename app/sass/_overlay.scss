@@ -1,0 +1,36 @@
+  
+
+
+.favorites__cards {
+    display: flex;        
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 1em 0;    
+}  
+.favorite__card {
+    width: 30%;
+    margin: 0 1em 1em 0;
+    @include middle {
+        width: 45%;        
+    }
+    @include phones {
+        width: 80%;        
+    }
+}
+.o-fav__close, .o-delivery__close, .o-cart__close {
+    position: absolute;
+    cursor: pointer;
+    font-size: 60px;
+    line-height: 1;
+    top: 0;
+    right: 5px;    
+    color: $whiteColor;  
+    @include tablets {
+        font-size: 40px;
+    }   
+    @include phones {
+        font-size: 30px;
+    } 
+
+}
+

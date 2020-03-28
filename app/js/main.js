@@ -26,14 +26,17 @@ function toggleModal(modalWindow, openButton, closeButton) {
   const openBtn = document.querySelector(openButton);
   const modal = document.querySelector(modalWindow);
   const closeBtn = document.querySelector(closeButton);
+  const ham = document.querySelector(".hamburger");
   openBtn.addEventListener("click", e => {
     let target = e.target;
     modal.style.display = "block";
+    ham.style.display = "none";
     document.body.style.overflow = "hidden";
   });
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
     document.body.style.overflow = "";
+    ham.style.display = "flex";
   });
   modal.addEventListener("click", e => {
     if (e.target === modal) {
@@ -71,7 +74,6 @@ function addFavorite() {
   cards.forEach(card => {
     counter(card);
     const btnFav = card.querySelector(".product-card__favlink");
-
     btnFav.addEventListener("click", e => {
       e.preventDefault();
 
@@ -91,6 +93,7 @@ function addFavorite() {
           );
           btnHeart.classList.remove("active");
           cardForRemove.remove(); //удаляем из Избранного
+          productCounter("", ".fav-counter");
         }
       }
     });
@@ -102,7 +105,7 @@ function cardClone(card) {
   const cardNew = card.cloneNode(true); //клонируем карточку в избранное
   const btnDel = cardNew.querySelector(".product-card__favlink"); //находим кнопку heart в карточке в Избранном
   cardNew.classList.add("favorite__card"); //добавляем класс к карточке в Избранном
-
+  productCounter("add", ".fav-counter"); //меняем счетчик в товаров в избранном
   btnDel.addEventListener("click", e => {
     //ловим клик на кнопке heart удаления из избранного
     if ((e.target.tagName = "use") || (e.target.tagName = "svg")) {
@@ -110,10 +113,13 @@ function cardClone(card) {
       const origBtnHeart = card.querySelector(".product-card__heart"); //находим кнопку в оригинале
       origBtnHeart.classList.remove("active"); //делаем кнопку не активной
       cardNew.remove(); // удаляем катрочку из избранного (удаляем клона)
+      productCounter("", ".fav-counter"); //меняем счетчик в товаров в избранном
     }
   });
   return cardNew;
 }
+//end функции клонирования карточки
+
 //функция работы счетчика в карточке
 function counter(card) {
   const plus = card.querySelector(".product-card__sign-plus"),
@@ -133,10 +139,73 @@ function counter(card) {
     numSelector.textContent = num;
   });
 }
+//end функции работы счетчика в карточке
+
+//функция отображения количества товаров в избранном
+function productCounter(action, btn) {
+  const count = document.querySelector(btn);
+  let num = +count.textContent;
+  action == "add" ? num++ : num--;
+  count.textContent = num;
+}
+//end функции отображения количества товаров в избранном
+
+//функция работы с корзиной
+function cart() {
+  const cards = document.querySelectorAll(".product-card"); //выбираем все карточки продуктов
+  cards.forEach(card => {
+    const bag = card.querySelector(".product-card__link");
+    bag.addEventListener("click", e => {
+      e.preventDefault();
+      addCart(card);
+      productCounter("add", ".cart-count");
+      showData();
+    });
+  });
+}
+
+//функция добавления в корзину
+function addCart(card) {
+  let wrapper = document.querySelector(".order__cards"); //выбираем обертку карточек в корзине
+
+  const title = card.querySelector(".product-card__title").textContent, //получаем название продукта
+    src = card.querySelector(".product-card__pic").getAttribute("src"), //получаем путь к картинке
+    price = card.querySelector(".product-card__price").textContent, //получаем цену
+    number = card.querySelector(".product-card__number_hover").textContent, //получаем кол-во/вес
+    count = card.querySelector(".product-card__num").textContent; //получаем количество из счетчика
+
+  let fragment = document.createElement("div");
+  const template = document.querySelector(".cartProduct").innerHTML;
+  fragment.innerHTML = template;
+  fragment.querySelector(".order__card-pic").setAttribute("src", src);
+  fragment.querySelector(".order__roll").textContent = title;
+  fragment.querySelector(".order__card-sum").textContent = price;
+  fragment.querySelector(".order__card-num").textContent = number;
+  fragment.querySelector(".order__card-count").textContent = count;
+  wrapper.appendChild(fragment);
+}
+function showData() {
+  const cartCards = document.querySelectorAll(".order__card");
+  console.log(cartCards);
+
+  cartCards.forEach(el => {
+    console.log(el);
+    counter(el);
+    // const btnRemove = el.querySelector(".order__card-close");
+    // btnRemove.addEventListener("click", () => {
+    //   console.log(btnRemove);
+    //
+    // });
+  });
+}
+//функция удаления карточки из корзины
+function removeCart(card) {}
+//функция очистки корзины
 
 search();
 toggleModal(".o-fav", ".heart", ".o-fav__close");
 toggleModal(".o-delivery", ".delivery-link", ".o-delivery__close");
+toggleModal(".o-cart", ".bag", ".o-cart__close");
 addFavorite();
 toggleHam();
-counter(document.querySelector(".product-card"));
+cart();
