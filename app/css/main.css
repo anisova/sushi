@@ -551,47 +551,6 @@ img {
     .h3 {
       font-size: 18px; } }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(47, 50, 52, 0.6);
-  display: none; }
-
-.o-container {
-  width: 75%;
-  height: 80vh;
-  overflow: auto;
-  margin: 10vh auto;
-  background-color: #ededed;
-  padding: 2em;
-  border-radius: 15px; }
-  @media (max-width: 768px) {
-    .o-container {
-      width: 90vw;
-      height: 90vh; } }
-  @media (max-width: 520px) {
-    .o-container {
-      border-radius: 0;
-      height: 100vh;
-      margin: 0; } }
-
-.fav-counter, .cart-count {
-  padding: 0 6px;
-  line-height: 18px;
-  background-color: red;
-  border-radius: 50%;
-  text-align: center;
-  color: white;
-  font-size: 12px;
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  z-index: 5; }
-
 .hamburger {
   z-index: 20;
   cursor: pointer;
@@ -1380,7 +1339,9 @@ body.locked {
     .favorite__card {
       width: 80%; } }
 
-.o-fav__close, .o-delivery__close, .o-cart__close {
+.o-fav__close,
+.o-delivery__close,
+.o-cart__close {
   position: absolute;
   cursor: pointer;
   font-size: 60px;
@@ -1389,15 +1350,63 @@ body.locked {
   right: 5px;
   color: #fff; }
   @media (max-width: 768px) {
-    .o-fav__close, .o-delivery__close, .o-cart__close {
+    .o-fav__close,
+    .o-delivery__close,
+    .o-cart__close {
       font-size: 40px; } }
   @media (max-width: 520px) {
-    .o-fav__close, .o-delivery__close, .o-cart__close {
+    .o-fav__close,
+    .o-delivery__close,
+    .o-cart__close {
       font-size: 30px; } }
 
 @media (max-width: 520px) {
-  .o-cart__close {
+  .o-cart__close,
+  .o-fav__close {
     color: black; } }
+
+.o-container {
+  width: 75%;
+  height: 80vh;
+  overflow: auto;
+  margin: 10vh auto;
+  background-color: #ededed;
+  padding: 2em;
+  border-radius: 15px; }
+  @media (max-width: 768px) {
+    .o-container {
+      width: 90vw;
+      height: 90vh; } }
+  @media (max-width: 520px) {
+    .o-container {
+      border-radius: 0;
+      height: 100vh;
+      width: 100%;
+      margin: 0; } }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.6);
+  display: none; }
+
+.fav-counter,
+.cart-count {
+  padding: 0 6px;
+  line-height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  z-index: 5; }
 
 .o-delivery__group {
   display: -webkit-box;

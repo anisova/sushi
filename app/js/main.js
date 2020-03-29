@@ -159,7 +159,6 @@ function cart() {
       e.preventDefault();
       addCart(card);
       productCounter("add", ".cart-count");
-      showData();
     });
   });
 }
@@ -167,13 +166,11 @@ function cart() {
 //функция добавления в корзину
 function addCart(card) {
   let wrapper = document.querySelector(".order__cards"); //выбираем обертку карточек в корзине
-
   const title = card.querySelector(".product-card__title").textContent, //получаем название продукта
     src = card.querySelector(".product-card__pic").getAttribute("src"), //получаем путь к картинке
     price = card.querySelector(".product-card__price").textContent, //получаем цену
     number = card.querySelector(".product-card__number_hover").textContent, //получаем кол-во/вес
     count = card.querySelector(".product-card__num").textContent; //получаем количество из счетчика
-
   let fragment = document.createElement("div");
   const template = document.querySelector(".cartProduct").innerHTML;
   fragment.innerHTML = template;
@@ -183,24 +180,31 @@ function addCart(card) {
   fragment.querySelector(".order__card-num").textContent = number;
   fragment.querySelector(".order__card-count").textContent = count;
   wrapper.appendChild(fragment);
+  counter(fragment);
+  removeCart(fragment);
 }
-function showData() {
-  const cartCards = document.querySelectorAll(".order__card");
-  console.log(cartCards);
 
-  cartCards.forEach(el => {
-    console.log(el);
-    counter(el);
-    // const btnRemove = el.querySelector(".order__card-close");
-    // btnRemove.addEventListener("click", () => {
-    //   console.log(btnRemove);
-    //
-    // });
+//функция удаления карточки из корзины
+function removeCart(card) {
+  const btn = card.querySelector(".order__card-close");
+  btn.addEventListener("click", () => {
+    card.remove();
   });
 }
-//функция удаления карточки из корзины
-function removeCart(card) {}
 //функция очистки корзины
+function clearCart() {
+  const btnClear = document.querySelector(".order__reset");
+  wrapper = document.querySelector(".order__cards");
+  btnClear.addEventListener("click", e => {
+    e.preventDefault();
+    wrapper.innerHTML = "";
+  });
+}
+
+//функция подсчета суммы заказа
+function cartTotal() {
+  let total = 0;
+}
 
 search();
 toggleModal(".o-fav", ".heart", ".o-fav__close");
@@ -209,3 +213,4 @@ toggleModal(".o-cart", ".bag", ".o-cart__close");
 addFavorite();
 toggleHam();
 cart();
+clearCart();
