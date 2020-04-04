@@ -336,7 +336,7 @@ img {
 .cards__group {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
   @include phones {
     justify-content: center;
   }
@@ -349,7 +349,7 @@ padding: 1em 2em;
 border-radius: 25px;
 font-size: 14px;
 position: relative;
-// margin-right: 0.5em;
+margin-right: 0.8em;
 margin-bottom: 1em;
 @include middle {
   width: 32%;

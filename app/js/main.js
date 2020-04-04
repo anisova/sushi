@@ -124,27 +124,6 @@ function cardClone(card) {
 }
 //end функции клонирования карточки
 
-//функция работы счетчика в карточке
-function counter(card) {
-  const plus = card.querySelector(".product-card__sign-plus"),
-    minus = card.querySelector(".product-card__sign-minus");
-  plus.addEventListener("click", e => {
-    const numSelector = card.querySelector(".product-card__num");
-    let num = +numSelector.textContent;
-    num++;
-    numSelector.textContent = num;
-  });
-  minus.addEventListener("click", e => {
-    const numSelector = card.querySelector(".product-card__num");
-    let num = +numSelector.textContent;
-    if (num <= 1) {
-      num = 1;
-    } else num--;
-    numSelector.textContent = num;
-  });
-}
-//end функции работы счетчика в карточке
-
 //функция отображения количества товаров
 function productCounter(action, btn) {
   const count = document.querySelector(btn);
@@ -181,23 +160,44 @@ function check(el) {
 
   return result;
 }
+//функция работы счетчика в карточке
+function counter(card) {
+  const plus = card.querySelector(".product-card__sign-plus"),
+    minus = card.querySelector(".product-card__sign-minus");
+
+  plus.addEventListener("click", e => {
+    const numSelector = card.querySelector(".product-card__num");
+    let num = +numSelector.textContent;
+    num++;
+    numSelector.textContent = num;
+  });
+  minus.addEventListener("click", e => {
+    const numSelector = card.querySelector(".product-card__num");
+    let num = +numSelector.textContent;
+    if (num <= 1) {
+      num = 1;
+    } else num--;
+    numSelector.textContent = num;
+  });
+}
+//end функции работы счетчика в карточке
 
 //функция подсчета суммы заказа
 function cartTotal(action, card) {
   const price = card.querySelector(".product-card__price"),
-    orderPrice = card.querySelector(".order__card-sum");
-  (cartSum = document.querySelector(".order__sum")),
-    (cartSummary = document.querySelector(".order__summary-sum"));
+    orderPrice = card.querySelector(".order__card-sum"),
+    count = parseFloat(card.querySelector(".product-card__num").textContent),
+    cartSum = document.querySelector(".order__sum"),
+    cartSummary = document.querySelector(".order__summary-sum");
   let total;
-  // = parseFloat(price.textContent);
-
   if (action == "add") {
-    total = parseFloat(cartSum.textContent) + parseFloat(price.textContent);
+    total =
+      parseFloat(cartSum.textContent) + count * parseFloat(price.textContent);
   } else {
     total =
-      parseFloat(cartSum.textContent) - parseFloat(orderPrice.textContent);
+      parseFloat(cartSum.textContent) -
+      count * parseFloat(orderPrice.textContent);
   }
-
   cartSum.textContent = total + " руб.";
   cartSummary.textContent = total + " руб.";
 }
