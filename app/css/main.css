@@ -1341,7 +1341,8 @@ body.locked {
 
 .o-fav__close,
 .o-delivery__close,
-.o-cart__close {
+.o-cart__close,
+.o-menu__close {
   position: absolute;
   cursor: pointer;
   font-size: 60px;
@@ -1352,12 +1353,14 @@ body.locked {
   @media (max-width: 768px) {
     .o-fav__close,
     .o-delivery__close,
-    .o-cart__close {
+    .o-cart__close,
+    .o-menu__close {
       font-size: 40px; } }
   @media (max-width: 520px) {
     .o-fav__close,
     .o-delivery__close,
-    .o-cart__close {
+    .o-cart__close,
+    .o-menu__close {
       font-size: 30px; } }
 
 @media (max-width: 520px) {
@@ -1366,10 +1369,10 @@ body.locked {
     color: black; } }
 
 .o-container {
-  width: 75%;
-  height: 80vh;
+  width: 90%;
+  height: 90vh;
   overflow: auto;
-  margin: 10vh auto;
+  margin: 2vh auto;
   background-color: #ededed;
   padding: 2em;
   border-radius: 15px; }
@@ -1388,7 +1391,7 @@ body.locked {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   width: 100%;
   height: 100%;
   background-color: rgba(47, 50, 52, 0.6);

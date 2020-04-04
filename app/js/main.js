@@ -23,20 +23,24 @@ function toggleHam() {
 
 // Функция для появления модального окна
 function toggleModal(modalWindow, openButton, closeButton) {
-  const openBtn = document.querySelector(openButton);
+  const openBtn = document.querySelectorAll(openButton);
+
   const modal = document.querySelector(modalWindow);
   const closeBtn = document.querySelector(closeButton);
   const ham = document.querySelector(".hamburger");
-  openBtn.addEventListener("click", e => {
-    let target = e.target;
-    modal.style.display = "block";
-    ham.style.display = "none";
-    document.body.style.overflow = "hidden";
+  openBtn.forEach(elem => {
+    elem.addEventListener("click", e => {
+      e.preventDefault();
+      let target = e.target;
+
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
   });
+
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
     document.body.style.overflow = "";
-    ham.style.display = "flex";
   });
   modal.addEventListener("click", e => {
     if (e.target === modal) {
@@ -88,7 +92,7 @@ function addFavorite() {
           wrapper.appendChild(cardNew); //добавляем карточку в обертку Избранного
         } else {
           const cardForRemove = wrapper.querySelector(
-            //если кннопка активна
+            //если кнопка активна
             `div[data-card='${card.dataset.card}']` // находим карточку-клона в избранном по атрибуту data
           );
           btnHeart.classList.remove("active");
@@ -141,7 +145,7 @@ function counter(card) {
 }
 //end функции работы счетчика в карточке
 
-//функция отображения количества товаров в избранном
+//функция отображения количества товаров
 function productCounter(action, btn) {
   const count = document.querySelector(btn);
   let num = +count.textContent;
@@ -157,10 +161,45 @@ function cart() {
     const bag = card.querySelector(".product-card__link");
     bag.addEventListener("click", e => {
       e.preventDefault();
-      addCart(card);
-      productCounter("add", ".cart-count");
+      let checking = check(card);
+      if (checking) {
+        addCart(card);
+        cartTotal("add", card);
+        productCounter("add", ".cart-count");
+      }
     });
   });
+}
+
+//функция проверка на повтор
+function check(el) {
+  const orderCards = document.querySelectorAll(".order__card");
+  let result = true;
+  orderCards.forEach(orderCard => {
+    if (orderCard.dataset.card === el.dataset.card) result = false;
+  });
+
+  return result;
+}
+
+//функция подсчета суммы заказа
+function cartTotal(action, card) {
+  const price = card.querySelector(".product-card__price"),
+    orderPrice = card.querySelector(".order__card-sum");
+  (cartSum = document.querySelector(".order__sum")),
+    (cartSummary = document.querySelector(".order__summary-sum"));
+  let total;
+  // = parseFloat(price.textContent);
+
+  if (action == "add") {
+    total = parseFloat(cartSum.textContent) + parseFloat(price.textContent);
+  } else {
+    total =
+      parseFloat(cartSum.textContent) - parseFloat(orderPrice.textContent);
+  }
+
+  cartSum.textContent = total + " руб.";
+  cartSummary.textContent = total + " руб.";
 }
 
 //функция добавления в корзину
@@ -168,17 +207,21 @@ function addCart(card) {
   let wrapper = document.querySelector(".order__cards"); //выбираем обертку карточек в корзине
   const title = card.querySelector(".product-card__title").textContent, //получаем название продукта
     src = card.querySelector(".product-card__pic").getAttribute("src"), //получаем путь к картинке
+    data = card.dataset.card, //получаем идентификатор карточки
     price = card.querySelector(".product-card__price").textContent, //получаем цену
     number = card.querySelector(".product-card__number_hover").textContent, //получаем кол-во/вес
     count = card.querySelector(".product-card__num").textContent; //получаем количество из счетчика
   let fragment = document.createElement("div");
   const template = document.querySelector(".cartProduct").innerHTML;
+
   fragment.innerHTML = template;
   fragment.querySelector(".order__card-pic").setAttribute("src", src);
+  fragment.firstElementChild.setAttribute("data-card", data);
   fragment.querySelector(".order__roll").textContent = title;
   fragment.querySelector(".order__card-sum").textContent = price;
   fragment.querySelector(".order__card-num").textContent = number;
   fragment.querySelector(".order__card-count").textContent = count;
+
   wrapper.appendChild(fragment);
   counter(fragment);
   removeCart(fragment);
@@ -187,8 +230,11 @@ function addCart(card) {
 //функция удаления карточки из корзины
 function removeCart(card) {
   const btn = card.querySelector(".order__card-close");
+
   btn.addEventListener("click", () => {
     card.remove();
+    productCounter("", ".cart-count");
+    cartTotal("", card);
   });
 }
 //функция очистки корзины
@@ -197,19 +243,25 @@ function clearCart() {
   wrapper = document.querySelector(".order__cards");
   btnClear.addEventListener("click", e => {
     e.preventDefault();
+    document.querySelector(".order__summary-sum").textContent = "0 руб";
+    document.querySelector(".order__sum").textContent = "0 руб";
+
     wrapper.innerHTML = "";
   });
 }
 
-//функция подсчета суммы заказа
-function cartTotal() {
-  let total = 0;
+function productCounter(action, btn) {
+  const count = document.querySelector(btn);
+  let num = +count.textContent;
+  action == "add" ? num++ : num--;
+  count.textContent = num;
 }
 
 search();
 toggleModal(".o-fav", ".heart", ".o-fav__close");
 toggleModal(".o-delivery", ".delivery-link", ".o-delivery__close");
 toggleModal(".o-cart", ".bag", ".o-cart__close");
+toggleModal(".o-menu", ".menu-btn", ".o-menu__close");
 addFavorite();
 toggleHam();
 cart();
