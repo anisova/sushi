@@ -38,7 +38,8 @@
   }
 
   .o-cart__close,
-  .o-fav__close {
+  .o-fav__close,
+  .o-menu__close {
       @include phones {
           color: black;
       }

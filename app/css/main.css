@@ -1362,7 +1362,8 @@ body.locked {
 
 @media (max-width: 520px) {
   .o-cart__close,
-  .o-fav__close {
+  .o-fav__close,
+  .o-menu__close {
     color: black; } }
 
 .o-container {
